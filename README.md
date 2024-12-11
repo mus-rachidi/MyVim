@@ -101,17 +101,6 @@ This guide explains how to use the features configured in the `.vimrc` file to e
    - Case-insensitive unless uppercase letters are used.
 
 ---
-
-## Troubleshooting
-
-- **Color Scheme Error**:
-  If you see `E185: Cannot find color scheme 'dracula'`, run `:PlugInstall` to install the plugin.
-
-- **FZF Issues**:
-  Ensure `fzf` is installed on your system. Installation guide: [FZF GitHub](https://github.com/junegunn/fzf).
-
----
-
 Enjoy your enhanced Vim setup!
 
 ```bash
