@@ -126,6 +126,10 @@ Plug 'Yggdroot/indentLine'        " Show indent lines
 Plug 'jiangmiao/auto-pairs'       " Auto close brackets/quotes
 Plug 'scrooloose/nerdcommenter'   " Easy commenting
 Plug 'dense-analysis/ale'         " Linting and syntax checking
+Plug 'tpope/vim-surround'         " Surround text objects
+Plug 'mbbill/undotree'            " Undo history tree visualization
+Plug 'easymotion/vim-easymotion'  " Quick navigation
+Plug 'vim-syntastic/syntastic'    " Syntax checking
 
 call plug#end()
 
@@ -180,6 +184,23 @@ let g:ale_fixers = {
 
 " NERDCommenter settings
 let g:NERDCreateDefaultMappings = 1
+
+" EasyMotion configuration
+map <Leader><Leader>w <Plug>(easymotion-w)
+map <Leader><Leader>b <Plug>(easymotion-b)
+
+" Surround configuration
+let g:surround_no_mappings = 1
+nmap ds <Plug>Dsurround
+nmap cs <Plug>Csurround
+nmap cS <Plug>CSurround
+
+" UndoTree keybinding
+nnoremap <F5> :UndotreeToggle<CR>
+
+" Syntastic settings
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
 
 " Miscellaneous settings
 set splitbelow            " Horizontal splits open below
